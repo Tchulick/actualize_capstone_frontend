@@ -4,17 +4,16 @@
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
+import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Welcome to the Capstone App",
     };
   },
-  created: function() {},
   methods: {},
 };
 </script>

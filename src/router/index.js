@@ -5,6 +5,10 @@ import RoomsIndex from "../views/RoomsIndex.vue";
 import Login from "../views/Login.vue";
 import Signup from "../views/Signup.vue";
 import Logout from "../views/Logout.vue";
+import Room from "../views/Room.vue";
+import Profile from "../views/Profile.vue";
+import UserRoom from "../views/UserRoomCreate.vue";
+import RoomNew from "../views/RoomNew.vue";
 
 Vue.use(VueRouter);
 
@@ -26,6 +30,10 @@ const routes = [
   { path: "/login", name: "Login", component: Login },
   { path: "/signup", name: "Signup", component: Signup },
   { path: "/logout", name: "Logout", component: Logout },
+  { path: "/room", name: "Room", component: Room },
+  { path: "/profile", name: "Profile", component: Profile },
+  { path: "/user_room", name: "UserRoom", component: UserRoom },
+  { path: "/rooms/new", name: "RoomNew", component: RoomNew },
 ];
 
 const router = new VueRouter({

@@ -12,6 +12,12 @@
       <router-link to="/signup">Signup</router-link>
       |
       <router-link to="/logout">Logout</router-link>
+      |
+      <router-link to="/profile">Profile Page</router-link>
+      |
+      <router-link to="/rooms/new">Create New Room</router-link>
+      |
+      <router-link to="/room">Test Page</router-link>
     </div>
     <router-view />
   </div>
@@ -39,3 +45,27 @@
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  data: function() {
+    return {
+      jwt: null,
+      userId: null,
+    };
+  },
+  created: function() {
+    this.setJwt();
+    this.setUserId();
+  },
+  methods: {
+    setJwt: function() {
+      this.jwt = localStorage.jwt;
+      console.log(localStorage.jwt);
+    },
+    setUserId: function() {
+      this.userId = parseInt(localStorage.user_id);
+    },
+  },
+};
+</script>

@@ -2,7 +2,7 @@
   <div id="app">
     <!-- Header -->
     <header id="header">
-      <h1 id="logo"><a href="/">Dope RPG APP</a></h1>
+      <h1 id="logo"><a href="/">Conjurr</a></h1>
       <nav id="nav">
         <ul>
           <li><a href="/">Home</a></li>
@@ -40,11 +40,11 @@
     <section id="banner">
       <div class="content">
         <header>
-          <h2>Dis the place to play those tabletop games</h2>
+          <h2>Welcome to Conjurr!</h2>
           <p>
-            Seriously it's wack how dope this place is.
+            Video conferencing platform made for tabletop gamers, by gamers.
             <br />
-            Tell your people, becasue this is hot.
+            Message your friends and hop on Conjurr, epic adventures await!
           </p>
         </header>
         <span class="image"><img src="images/d&d_red_box.jpg" alt="" /></span>

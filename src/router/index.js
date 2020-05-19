@@ -10,6 +10,7 @@ import Profile from "../views/Profile.vue";
 import RoomNew from "../views/RoomNew.vue";
 import RoomShow from "../views/RoomShow.vue";
 import RoomEdit from "../views/RoomEdit.vue";
+import ProfileEdit from "../views/ProfileEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,7 @@ const routes = [
   { path: "/login", name: "Login", component: Login },
   { path: "/logout", name: "Logout", component: Logout },
   { path: "/profile", name: "Profile", component: Profile },
+  { path: "/profile/edit", name: "ProfileEdit", component: ProfileEdit },
   { path: "/test_room", name: "TestRoom", component: TestRoom },
 ];
 

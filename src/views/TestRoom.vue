@@ -2,7 +2,12 @@
   <div class="room">
     <div>
       <h1>{{ message }}</h1>
-      <iframe src="192.168.0.124:9001/demos/" title="RTC Multi Connection"></iframe>
+      <div
+        id="videos-container"
+        style="margin: 20px 0; -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);"
+      ></div>
+      <!-- <iframe src="192.168.0.124:9001/demos/" title="RTC Multi Connection"></iframe> -->
     </div>
   </div>
 </template>
@@ -17,6 +22,20 @@ export default {
     return {
       message: "Room Page",
     };
+  },
+  mounted: function() {
+    var connection = new RTCMultiConnection();
+
+    // this line is VERY_important
+    connection.socketURL = "https://rtcmulticonnection.herokuapp.com:443/";
+
+    // if you want audio+video conferencing
+    connection.session = {
+      audio: true,
+      video: true,
+    };
+    connection.videosContainer = document.getElementById("videos-container");
+    connection.openOrJoin("your-room-id");
   },
 };
 

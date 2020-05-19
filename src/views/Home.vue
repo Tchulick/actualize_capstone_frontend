@@ -1,7 +1,25 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <P>{{ about }}</P>
+    <P>
+      I feel like I was mauled by Jesus. Oh, I don't have time for this. I have to go and buy a single piece of fruit
+      with a coupon and then return it, making people wait behind me while I complain. Yes, if you make it look like an
+      electrical fire. When you do things right, people won't be sure you've done anything at all.
+      <br />
+      Come, Comrade Bender! We must take to the streets! Quite possible. We live long and are celebrated poopers. Anyone
+      who laughs is a communist! Shut up and get to the point! Bender, I didn't know you liked cooking. That's so cute.
+      <br />
+      I'm just glad my fat, ugly mama isn't alive to see this day. Kif might! Can we have Bender Burgers again? Oh, how
+      awful. Did he at least die painlessly? …To shreds, you say. Well, how is his wife holding up? …To shreds, you say.
+      Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel ways about stuff! Oh dear! She's
+      stuck in an infinite loop, and he's an idiot! Well, that's love for you.
+      <br />
+      And until then, I can never die? These old Doomsday Devices are dangerously unstable. I'll rest easier not knowing
+      where they are. Isn't it true that you have been paid for your testimony? But I know you in the future. I cleaned
+      your poop. Guess again. It's a T. It goes "tuh". You, minion. Lift my arm. AFTER HIM! Oh Leela! You're the only
+      person I could turn to; you're the only person who ever loved me. Stop it, stop it. It's fine. I will 'destroy'
+      you!
+    </P>
   </div>
 </template>
 
@@ -12,9 +30,8 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "Welcome to the Capstone App",
-      about:
-        "Lorem ipsum dolor sit amet, cu essent malorum ornatus has, populo virtute lucilius an sed, duo nibh ipsum graeci ea. Ei pro quas dissentiet eloquentiam, debitis verterem praesent no cum, sit ea quis bonorum nusquam. Vel mentitum explicari ex, audire referrentur mei id. Feugiat referrentur ea vel, consetetur persequeris duo id. Duo ut veri adipisci iracundia. Qui in adhuc causae. Eu duo movet corpora praesent, eos vidisse apeirian id. Et graece quaeque voluptatum duo. Aeque sonet ex mei. Et quis lobortis deseruisse sea. No sed ferri adversarium. Pro novum nonumy equidem ea, tation audiam inermis pro eu.",
+      message: "Welcome to Conjurr, it's hot",
+      about: "",
     };
   },
   methods: {},

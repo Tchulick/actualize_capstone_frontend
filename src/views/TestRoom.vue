@@ -2,6 +2,7 @@
   <div class="room">
     <div>
       <h1>{{ message }}</h1>
+      <iframe src="192.168.0.124:9001/demos/" title="RTC Multi Connection"></iframe>
     </div>
   </div>
 </template>

@@ -1,15 +1,16 @@
 <template>
   <div class="roomsIndex">
     <h1>{{ message }}</h1>
-    <div v-for="room in rooms">
+    <div v-for="room in rooms" v-bind:class="{ selected: room === currentRoom }">
+      <p>-------</p>
       <h1>{{ room.name }}</h1>
-      <button>Go to room</button>
+      <div>
+        <h4><a v-bind:href="`/rooms/${room.room_id}`">Go to room</a></h4>
+      </div>
+      <div>
+        <h4><a v-on:click="joinUserRoom()">Join Room</a></h4>
+      </div>
     </div>
-    <!-- <form v-on:submit.prevent="submit()"> -->
-    <!-- <a v-bind:href="`/posts/${this.post.id}/edit`">Edit Blog</a> -->
-
-    <!-- <button v-on:click>Create New Room</button> -->
-    <!-- <a v-bind:href="`/api/room/${this.room.id}`">Join Room</a> -->
   </div>
 </template>
 
@@ -23,6 +24,11 @@ export default {
     return {
       message: "All Rooms",
       rooms: [],
+      currentRoom: {},
+      user: {},
+      userId: "",
+      room_id: "",
+      room: "",
     };
   },
   created: function() {
@@ -31,6 +37,17 @@ export default {
       console.log(response);
     });
   },
-  methods: {},
+  methods: {
+    joinUserRoom: function() {
+      var params = {
+        user_id: this.current_user,
+        room_id: this.currentRoom.room_id,
+      };
+      axios.post("/api/user_rooms", params).then(response => {
+        this.$router.push("/rooms");
+        console.log(response);
+      });
+    },
+  },
 };
 </script>

@@ -4,8 +4,10 @@
     <p>{{ user.first_name }} {{ user.last_name }}</p>
     <p>Your Rooms</p>
     <div v-for="room in user.rooms">
-      <!-- <p>{{ room.name }}</p> -->
-      <button>{{ room.name }}</button>
+      <!-- <p>{{ room.id }}</p> -->
+      <h4>
+        <a v-bind:href="`/rooms/${room.id}`">{{ room.name }}</a>
+      </h4>
     </div>
   </div>
 </template>

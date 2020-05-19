@@ -5,10 +5,11 @@ import RoomsIndex from "../views/RoomsIndex.vue";
 import Login from "../views/Login.vue";
 import Signup from "../views/Signup.vue";
 import Logout from "../views/Logout.vue";
-import Room from "../views/Room.vue";
+import TestRoom from "../views/TestRoom.vue";
 import Profile from "../views/Profile.vue";
-import UserRoom from "../views/UserRoomCreate.vue";
 import RoomNew from "../views/RoomNew.vue";
+import RoomShow from "../views/RoomShow.vue";
+import RoomEdit from "../views/RoomEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -27,13 +28,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   { path: "/rooms", name: "RoomsIndex", component: RoomsIndex },
-  { path: "/login", name: "Login", component: Login },
-  { path: "/signup", name: "Signup", component: Signup },
-  { path: "/logout", name: "Logout", component: Logout },
-  { path: "/room", name: "Room", component: Room },
-  { path: "/profile", name: "Profile", component: Profile },
-  { path: "/user_room", name: "UserRoom", component: UserRoom },
   { path: "/rooms/new", name: "RoomNew", component: RoomNew },
+  { path: "/rooms/:id", name: "ShowRoom", component: RoomShow },
+  { path: "/rooms/:id/edit", name: "RoomEdit", component: RoomEdit },
+  { path: "/signup", name: "Signup", component: Signup },
+  { path: "/login", name: "Login", component: Login },
+  { path: "/logout", name: "Logout", component: Logout },
+  { path: "/profile", name: "Profile", component: Profile },
+  { path: "/test_room", name: "TestRoom", component: TestRoom },
 ];
 
 const router = new VueRouter({

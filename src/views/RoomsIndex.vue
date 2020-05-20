@@ -34,14 +34,14 @@ export default {
   created: function() {
     axios.get("/api/rooms").then(response => {
       this.rooms = response.data;
-      console.log(response);
+      console.log("Rooms: ", response);
     });
   },
   methods: {
     joinUserRoom: function() {
       var params = {
         user_id: this.current_user,
-        room_id: this.currentRoom.room_id,
+        room_id: this.currentRoom,
       };
       axios.post("/api/user_rooms", params).then(response => {
         this.$router.push("/rooms");

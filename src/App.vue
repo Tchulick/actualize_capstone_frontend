@@ -2,7 +2,7 @@
   <div id="app">
     <!-- Header -->
     <header id="header">
-      <h1 id="logo"><a href="/">Conjurr</a></h1>
+      <h1 id="logo" style="font-size: 2.4em;"><a href="/">Conjurr</a></h1>
       <nav id="nav">
         <ul>
           <li><a href="/">Home</a></li>
@@ -12,6 +12,8 @@
           <li><a href="/about">About</a></li>
           <li><a href="/logout">Logout</a></li>
           <li><a href="/test_room">Test Room</a></li>
+          <li><a href="localhost:8080/dice/dice/index.html">3D Dice Room</a></li>
+
           <!-- <li>
             <a href="#">Layouts</a>
             <ul>
@@ -49,7 +51,7 @@
         </header>
         <span class="image"><img src="images/d&d_red_box.jpg" alt="" /></span>
       </div>
-      <a href="#one" class="goto-next scrolly">Next</a>
+      <!-- <a href="#one" class="goto-next scrolly">Next</a> -->
     </section>
 
     <!-- One -->

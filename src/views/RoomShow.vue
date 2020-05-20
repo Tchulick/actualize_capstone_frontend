@@ -5,7 +5,7 @@
     <div
       id="videos-container"
       style="margin: 20px 0; -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);"
+      transform: scaleX(-1);"
     ></div>
     <div v-for="room in room.room_users">
       <h6>{{ room.user_id }}</h6>

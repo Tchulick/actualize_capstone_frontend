@@ -1,9 +1,10 @@
 <template>
   <div class="roomsIndex">
     <h1>{{ message }}</h1>
-    <div v-for="room in rooms" v-bind:class="{ selected: room === currentRoom }">
+    <div v-for="room in rooms">
       <p>-------</p>
       <h1>{{ room.name }}</h1>
+      <p>{{ room.room_id }}</p>
       <div>
         <h4><a v-bind:href="`/rooms/${room.room_id}`">Go to room</a></h4>
       </div>
@@ -41,7 +42,7 @@ export default {
     joinUserRoom: function() {
       var params = {
         user_id: this.current_user,
-        room_id: this.currentRoom,
+        room_id: this.room.room_id,
       };
       axios.post("/api/user_rooms", params).then(response => {
         this.$router.push("/rooms");

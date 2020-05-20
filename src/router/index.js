@@ -11,6 +11,8 @@ import RoomNew from "../views/RoomNew.vue";
 import RoomShow from "../views/RoomShow.vue";
 import RoomEdit from "../views/RoomEdit.vue";
 import ProfileEdit from "../views/ProfileEdit.vue";
+import DiceRoom from "../views/DiceTest.vue";
+// ../../public/dice/dice/index.vue
 
 Vue.use(VueRouter);
 
@@ -38,6 +40,7 @@ const routes = [
   { path: "/profile", name: "Profile", component: Profile },
   { path: "/profile/edit", name: "ProfileEdit", component: ProfileEdit },
   { path: "/test_room", name: "TestRoom", component: TestRoom },
+  { path: "/dice_room", name: "DiceTestRoom", component: DiceRoom },
 ];
 
 const router = new VueRouter({

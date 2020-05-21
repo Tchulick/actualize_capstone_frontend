@@ -2616,11 +2616,12 @@ input[type="radio"] + label:before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("images/overlay.png");
+  background-image: url("images/conan-frank-frazetta.jpg");
   width: 100%;
   height: 100%;
   z-index: 1;
 }
+/* images/overlay.png */
 
 .image img {
   border-radius: 4px;

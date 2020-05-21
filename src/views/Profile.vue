@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
-    <h1>{{ message }}</h1>
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    <h1 style="font-size: 1.5em;">{{ message }}</h1>
+    <p style="font-size: 2em;">{{ user.first_name }} {{ user.last_name }}</p>
     <p>Your Rooms</p>
     <div v-for="room in user.rooms">
       <!-- <p>{{ room.id }}</p> -->

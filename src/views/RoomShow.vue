@@ -8,22 +8,27 @@
       ></div>
       <!-- <iframe src="192.168.0.124:9001/demos/" title="RTC Multi Connection"></iframe> -->
     </div>
-    <h1>{{ room.name }}</h1>
+    <div style="text-align: center;">
+      <h1 style="font-size: 3em; ">{{ room.name }}</h1>
 
-    <div v-for="room in room.room_users">
-      <h6>{{ room.user_id }}</h6>
-    </div>
-    <div style="width: 25em;">
-      <input type="text" v-model="newMessage" />
-      <button v-on:click="addMessage()">SEND</button>
-    </div>
-    <div>
-      <h2>Chat Log</h2>
-      <div v-for="message in messages">
-        <h1>{{ message }}</h1>
+      <!-- <div v-for="room in room.room_users">
+        <h6>{{ room.user_id }}</h6>
+      </div> -->
+      <div v-for="person in peopleInRoom">
+        {{ person }}
       </div>
+      <div>
+        <input type="text" v-model="newMessage" />
+        <button v-on:click="addMessage()">SEND</button>
+      </div>
+      <div style="text-align:">
+        <h2>Chat Log</h2>
+        <div v-for="message in messages">
+          <h1>{{ message }}</h1>
+        </div>
+      </div>
+      <a v-bind:href="`/rooms/${this.$route.params.id}/edit`">Edit Room</a>
     </div>
-    <a v-bind:href="`/rooms/${this.$route.params.id}/edit`">Edit Room</a>
   </div>
 </template>
 
@@ -44,6 +49,16 @@ export default {
       newMessage: "",
       connection: null,
       room: {},
+      peopleInRoom: [
+        "Sam Freund",
+        "Jack Egeling",
+        "Henry Beggs",
+        "Mike Neu",
+        "Andrew Meyer",
+        "Dante Yokley",
+        "James Turner",
+        "Tom Chulick",
+      ],
       users: [],
     };
   },
